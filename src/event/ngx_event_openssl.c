@@ -1,7 +1,7 @@
 
 /*
  * Copyright (C) Igor Sysoev
- * Copyright (C) Nginx, Inc.
+ * Copyright (C) nguyenx, Inc.
  */
 
 
@@ -4314,7 +4314,7 @@ ngx_ssl_session_ticket_keys(ngx_conf_t *cf, ngx_ssl_t *ssl, ngx_array_t *paths)
         == 0)
     {
         ngx_log_error(NGX_LOG_WARN, cf->log, 0,
-                      "nginx was built with Session Tickets support, however, "
+                      "nguyenx was built with Session Tickets support, however, "
                       "now it is linked dynamically to an OpenSSL library "
                       "which has no tlsext support, therefore Session Tickets "
                       "are not available");

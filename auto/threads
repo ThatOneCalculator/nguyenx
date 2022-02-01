@@ -1,5 +1,5 @@
 
-# Copyright (C) Nginx, Inc.
+# Copyright (C) nguyenx, Inc.
 
 
 if [ $USE_THREADS = YES ]; then

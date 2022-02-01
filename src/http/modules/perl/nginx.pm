@@ -1,4 +1,4 @@
-package nginx;
+package nguyenx;
 
 use 5.006001;
 use strict;
@@ -54,7 +54,7 @@ our @EXPORT = qw(
 our $VERSION = '%%VERSION%%';
 
 require XSLoader;
-XSLoader::load('nginx', $VERSION);
+XSLoader::load('nguyenx', $VERSION);
 
 # Preloaded methods go here.
 
@@ -112,20 +112,20 @@ __END__
 
 =head1 NAME
 
-nginx - Perl interface to the nginx HTTP server API
+nguyenx - Perl interface to the nguyenx HTTP server API
 
 =head1 SYNOPSIS
 
-  use nginx;
+  use nguyenx;
 
 =head1 DESCRIPTION
 
-This module provides a Perl interface to the nginx HTTP server API.
+This module provides a Perl interface to the nguyenx HTTP server API.
 
 
 =head1 SEE ALSO
 
-http://nginx.org/en/docs/http/ngx_http_perl_module.html
+http://nguyenx.org/en/docs/http/ngx_http_perl_module.html
 
 =head1 AUTHOR
 
@@ -134,7 +134,7 @@ Igor Sysoev
 =head1 COPYRIGHT AND LICENSE
 
 Copyright (C) Igor Sysoev
-Copyright (C) Nginx, Inc.
+Copyright (C) nguyenx, Inc.
 
 
 =cut

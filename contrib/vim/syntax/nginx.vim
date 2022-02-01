@@ -1,5 +1,5 @@
 " Vim syntax file
-" Language: nginx.conf
+" Language: nguyenx.conf
 
 if exists("b:current_syntax")
   finish
@@ -775,15 +775,15 @@ syn keyword ngxDirective contained zone_sync_ssl_verify_depth
 syn keyword ngxDirective contained zone_sync_timeout
 
 " 3rd party modules list taken from
-" https://github.com/freebsd/freebsd-ports/blob/master/www/nginx-devel/Makefile
+" https://github.com/freebsd/freebsd-ports/blob/master/www/nguyenx-devel/Makefile
 " -----------------------------------------------------------------------------
 
 " Accept Language
-" https://github.com/giom/nginx_accept_language_module
+" https://github.com/giom/nguyenx_accept_language_module
 syn keyword ngxDirectiveThirdParty contained set_from_accept_language
 
 " Digest Authentication
-" https://github.com/atomx/nginx-http-auth-digest
+" https://github.com/atomx/nguyenx-http-auth-digest
 syn keyword ngxDirectiveThirdParty contained auth_digest
 syn keyword ngxDirectiveThirdParty contained auth_digest_drop_time
 syn keyword ngxDirectiveThirdParty contained auth_digest_evasion_time
@@ -795,7 +795,7 @@ syn keyword ngxDirectiveThirdParty contained auth_digest_timeout
 syn keyword ngxDirectiveThirdParty contained auth_digest_user_file
 
 " SPNEGO Authentication
-" https://github.com/stnoonan/spnego-http-auth-nginx-module
+" https://github.com/stnoonan/spnego-http-auth-nguyenx-module
 syn keyword ngxDirectiveThirdParty contained auth_gss
 syn keyword ngxDirectiveThirdParty contained auth_gss_allow_basic_fallback
 syn keyword ngxDirectiveThirdParty contained auth_gss_authorized_principal
@@ -811,7 +811,7 @@ syn keyword ngxDirectiveThirdParty contained auth_gss_service_ccache
 syn keyword ngxDirectiveThirdParty contained auth_gss_service_name
 
 " LDAP Authentication
-" https://github.com/kvspb/nginx-auth-ldap
+" https://github.com/kvspb/nguyenx-auth-ldap
 syn keyword ngxDirectiveThirdParty contained auth_ldap
 syn keyword ngxDirectiveThirdParty contained auth_ldap_cache_enabled
 syn keyword ngxDirectiveThirdParty contained auth_ldap_cache_expiration_time
@@ -827,7 +827,7 @@ syn keyword ngxDirectiveThirdParty contained auth_pam_service_name
 syn keyword ngxDirectiveThirdParty contained auth_pam_set_pam_env
 
 " AJP protocol proxy
-" https://github.com/yaoweibin/nginx_ajp_module
+" https://github.com/yaoweibin/nguyenx_ajp_module
 syn keyword ngxDirectiveThirdParty contained ajp_buffers
 syn keyword ngxDirectiveThirdParty contained ajp_buffer_size
 syn keyword ngxDirectiveThirdParty contained ajp_busy_buffers_size
@@ -875,7 +875,7 @@ syn keyword ngxDirectiveThirdParty contained aws_sign
 syn keyword ngxDirectiveThirdParty contained aws_signing_key
 
 " embedding Clojure or Java or Groovy programs
-" https://github.com/nginx-clojure/nginx-clojure
+" https://github.com/nguyenx-clojure/nguyenx-clojure
 syn keyword ngxDirectiveThirdParty contained access_handler_code
 syn keyword ngxDirectiveThirdParty contained access_handler_name
 syn keyword ngxDirectiveThirdParty contained access_handler_property
@@ -923,12 +923,12 @@ syn keyword ngxDirectiveThirdParty contained write_page_size
 
 
 " Certificate Transparency
-" https://github.com/grahamedgecombe/nginx-ct
+" https://github.com/grahamedgecombe/nguyenx-ct
 syn keyword ngxDirectiveThirdParty contained ssl_ct
 syn keyword ngxDirectiveThirdParty contained ssl_ct_static_scts
 
 " ngx_echo
-" https://github.com/openresty/echo-nginx-module
+" https://github.com/openresty/echo-nguyenx-module
 syn keyword ngxDirectiveThirdParty contained echo_abort_parent
 syn keyword ngxDirectiveThirdParty contained echo_after_body
 syn keyword ngxDirectiveThirdParty contained echo_before_body
@@ -947,24 +947,24 @@ syn keyword ngxDirectiveThirdParty contained echo_subrequest
 syn keyword ngxDirectiveThirdParty contained echo_subrequest_async
 
 " FastDFS
-" https://github.com/happyfish100/fastdfs-nginx-module
+" https://github.com/happyfish100/fastdfs-nguyenx-module
 syn keyword ngxDirectiveThirdParty contained ngx_fastdfs_module
 
 " ngx_headers_more
-" https://github.com/openresty/headers-more-nginx-module
+" https://github.com/openresty/headers-more-nguyenx-module
 syn keyword ngxDirectiveThirdParty contained more_clear_headers
 syn keyword ngxDirectiveThirdParty contained more_clear_input_headers
 syn keyword ngxDirectiveThirdParty contained more_set_headers
 syn keyword ngxDirectiveThirdParty contained more_set_input_headers
 
-" NGINX WebDAV missing commands support (PROPFIND & OPTIONS)
-" https://github.com/arut/nginx-dav-ext-module
+" nguyenx WebDAV missing commands support (PROPFIND & OPTIONS)
+" https://github.com/arut/nguyenx-dav-ext-module
 syn keyword ngxDirectiveThirdParty contained dav_ext_lock
 syn keyword ngxDirectiveThirdParty contained dav_ext_lock_zone
 syn keyword ngxDirectiveThirdParty contained dav_ext_methods
 
 " ngx_eval
-" https://github.com/openresty/nginx-eval-module
+" https://github.com/openresty/nguyenx-eval-module
 syn keyword ngxDirectiveThirdParty contained eval
 syn keyword ngxDirectiveThirdParty contained eval_buffer_size
 syn keyword ngxDirectiveThirdParty contained eval_escalate
@@ -989,7 +989,7 @@ syn keyword ngxDirectiveThirdParty contained fancyindex_show_path
 syn keyword ngxDirectiveThirdParty contained fancyindex_time_format
 
 " Footer filter
-" https://github.com/alibaba/nginx-http-footer-filter
+" https://github.com/alibaba/nguyenx-http-footer-filter
 syn keyword ngxDirectiveThirdParty contained footer
 syn keyword ngxDirectiveThirdParty contained footer_types
 
@@ -999,13 +999,13 @@ syn keyword ngxDirectiveThirdParty contained geoip2
 syn keyword ngxDirectiveThirdParty contained geoip2_proxy
 syn keyword ngxDirectiveThirdParty contained geoip2_proxy_recursive
 
-" A version of the Nginx HTTP stub status module that outputs in JSON format
-" https://github.com/nginx-modules/nginx-json-status-module
+" A version of the nguyenx HTTP stub status module that outputs in JSON format
+" https://github.com/nguyenx-modules/nguyenx-json-status-module
 syn keyword ngxDirectiveThirdParty contained json_status
 syn keyword ngxDirectiveThirdParty contained json_status_type
 
-" MogileFS client for nginx
-" https://github.com/vkholodkov/nginx-mogilefs-module
+" MogileFS client for nguyenx
+" https://github.com/vkholodkov/nguyenx-mogilefs-module
 syn keyword ngxDirectiveThirdParty contained mogilefs_class
 syn keyword ngxDirectiveThirdParty contained mogilefs_connect_timeout
 syn keyword ngxDirectiveThirdParty contained mogilefs_domain
@@ -1016,8 +1016,8 @@ syn keyword ngxDirectiveThirdParty contained mogilefs_read_timeout
 syn keyword ngxDirectiveThirdParty contained mogilefs_send_timeout
 syn keyword ngxDirectiveThirdParty contained mogilefs_tracker
 
-" Ancient nginx plugin; probably not useful to anyone
-" https://github.com/kr/nginx-notice
+" Ancient nguyenx plugin; probably not useful to anyone
+" https://github.com/kr/nguyenx-notice
 syn keyword ngxDirectiveThirdParty contained notice
 syn keyword ngxDirectiveThirdParty contained notice_type
 
@@ -1146,7 +1146,7 @@ syn keyword ngxDirectiveThirdParty contained push_subscriber_concurrency
 syn keyword ngxDirectiveThirdParty contained push_subscriber_timeout
 
 " Push Stream
-" https://github.com/wandenberg/nginx-push-stream-module
+" https://github.com/wandenberg/nguyenx-push-stream-module
 syn keyword ngxDirectiveThirdParty contained push_stream_allow_connections_to_events_channel
 syn keyword ngxDirectiveThirdParty contained push_stream_allowed_origins
 syn keyword ngxDirectiveThirdParty contained push_stream_authorized_channels_only
@@ -1185,7 +1185,7 @@ syn keyword ngxDirectiveThirdParty contained push_stream_wildcard_channel_max_qt
 syn keyword ngxDirectiveThirdParty contained push_stream_wildcard_channel_prefix
 
 " redis module
-" https://www.nginx.com/resources/wiki/modules/redis/
+" https://www.nguyenx.com/resources/wiki/modules/redis/
 syn keyword ngxDirectiveThirdParty contained redis_bind
 syn keyword ngxDirectiveThirdParty contained redis_buffer_size
 syn keyword ngxDirectiveThirdParty contained redis_connect_timeout
@@ -1196,11 +1196,11 @@ syn keyword ngxDirectiveThirdParty contained redis_read_timeout
 syn keyword ngxDirectiveThirdParty contained redis_send_timeout
 
 " ngx_http_response
-" http://catap.ru/downloads/nginx/
+" http://catap.ru/downloads/nguyenx/
 syn keyword ngxDirectiveThirdParty contained response
 syn keyword ngxDirectiveThirdParty contained response_type
 
-" nginx_substitutions_filter
+" nguyenx_substitutions_filter
 " https://github.com/yaoweibin/ngx_http_substitutions_filter_module
 syn keyword ngxDirectiveThirdParty contained subs_buffers
 syn keyword ngxDirectiveThirdParty contained subs_filter
@@ -1208,8 +1208,8 @@ syn keyword ngxDirectiveThirdParty contained subs_filter_bypass
 syn keyword ngxDirectiveThirdParty contained subs_filter_types
 syn keyword ngxDirectiveThirdParty contained subs_line_buffer_size
 
-" Tarantool nginx upstream module
-" https://github.com/tarantool/nginx_upstream_module
+" Tarantool nguyenx upstream module
+" https://github.com/tarantool/nguyenx_upstream_module
 syn keyword ngxDirectiveThirdParty contained tnt_allowed_indexes
 syn keyword ngxDirectiveThirdParty contained tnt_allowed_spaces
 syn keyword ngxDirectiveThirdParty contained tnt_buffer_size
@@ -1238,8 +1238,8 @@ syn keyword ngxDirectiveThirdParty contained tnt_set_header
 syn keyword ngxDirectiveThirdParty contained tnt_update
 syn keyword ngxDirectiveThirdParty contained tnt_upsert
 
-" A module for nginx web server for handling file uploads using multipart/form-data encoding (RFC 1867)
-" https://github.com/Austinb/nginx-upload-module
+" A module for nguyenx web server for handling file uploads using multipart/form-data encoding (RFC 1867)
+" https://github.com/Austinb/nguyenx-upload-module
 syn keyword ngxDirectiveThirdParty contained upload_aggregate_form_field
 syn keyword ngxDirectiveThirdParty contained upload_archive_elm
 syn keyword ngxDirectiveThirdParty contained upload_archive_elm_separator
@@ -1275,8 +1275,8 @@ syn keyword ngxDirectiveThirdParty contained upload_unzip_max_file_name_len
 syn keyword ngxDirectiveThirdParty contained upload_unzip_window
 syn keyword ngxDirectiveThirdParty contained upload_void_content_type
 
-" nginx-upload-progress-module
-" https://github.com/masterzen/nginx-upload-progress-module
+" nguyenx-upload-progress-module
+" https://github.com/masterzen/nguyenx-upload-progress-module
 syn keyword ngxDirectiveThirdParty contained report_uploads
 syn keyword ngxDirectiveThirdParty contained track_uploads
 syn keyword ngxDirectiveThirdParty contained upload_progress
@@ -1288,8 +1288,8 @@ syn keyword ngxDirectiveThirdParty contained upload_progress_jsonp_output
 syn keyword ngxDirectiveThirdParty contained upload_progress_jsonp_parameter
 syn keyword ngxDirectiveThirdParty contained upload_progress_template
 
-" Health checks upstreams for nginx
-" https://github.com/yaoweibin/nginx_upstream_check_module
+" Health checks upstreams for nguyenx
+" https://github.com/yaoweibin/nguyenx_upstream_check_module
 syn keyword ngxDirectiveThirdParty contained check
 syn keyword ngxDirectiveThirdParty contained check_fastcgi_param
 syn keyword ngxDirectiveThirdParty contained check_http_expect_alive
@@ -1298,13 +1298,13 @@ syn keyword ngxDirectiveThirdParty contained check_keepalive_requests
 syn keyword ngxDirectiveThirdParty contained check_shm_size
 syn keyword ngxDirectiveThirdParty contained check_status
 
-" The fair load balancer module for nginx
-" https://github.com/cryptofuture/nginx-upstream-fair
+" The fair load balancer module for nguyenx
+" https://github.com/cryptofuture/nguyenx-upstream-fair
 syn keyword ngxDirectiveThirdParty contained fair
 syn keyword ngxDirectiveThirdParty contained upstream_fair_shm_size
 
-" Nginx Video Thumb Extractor Module
-" https://github.com/wandenberg/nginx-video-thumbextractor-module
+" nguyenx Video Thumb Extractor Module
+" https://github.com/wandenberg/nguyenx-video-thumbextractor-module
 syn keyword ngxDirectiveThirdParty contained video_thumbextractor
 syn keyword ngxDirectiveThirdParty contained video_thumbextractor_image_height
 syn keyword ngxDirectiveThirdParty contained video_thumbextractor_image_width
@@ -1329,8 +1329,8 @@ syn keyword ngxDirectiveThirdParty contained video_thumbextractor_tile_sample_in
 syn keyword ngxDirectiveThirdParty contained video_thumbextractor_video_filename
 syn keyword ngxDirectiveThirdParty contained video_thumbextractor_video_second
 
-" drizzle-nginx-module - Upstream module for talking to MySQL and Drizzle directly
-" https://github.com/openresty/drizzle-nginx-module
+" drizzle-nguyenx-module - Upstream module for talking to MySQL and Drizzle directly
+" https://github.com/openresty/drizzle-nguyenx-module
 syn keyword ngxDirectiveThirdParty contained drizzle_buffer_size
 syn keyword ngxDirectiveThirdParty contained drizzle_connect_timeout
 syn keyword ngxDirectiveThirdParty contained drizzle_dbname
@@ -1348,8 +1348,8 @@ syn keyword ngxDirectiveThirdParty contained drizzle_status
 " https://github.com/cubicdaiya/ngx_dynamic_upstream
 syn keyword ngxDirectiveThirdParty contained dynamic_upstream
 
-" encrypt and decrypt nginx variable values
-" https://github.com/openresty/encrypted-session-nginx-module
+" encrypt and decrypt nguyenx variable values
+" https://github.com/openresty/encrypted-session-nguyenx-module
 syn keyword ngxDirectiveThirdParty contained encrypted_session_expires
 syn keyword ngxDirectiveThirdParty contained encrypted_session_iv
 syn keyword ngxDirectiveThirdParty contained encrypted_session_key
@@ -1357,16 +1357,16 @@ syn keyword ngxDirectiveThirdParty contained set_decrypt_session
 syn keyword ngxDirectiveThirdParty contained set_encrypt_session
 
 " serve content directly from MongoDB's GridFS
-" https://github.com/mdirolf/nginx-gridfs
+" https://github.com/mdirolf/nguyenx-gridfs
 syn keyword ngxDirectiveThirdParty contained gridfs
 syn keyword ngxDirectiveThirdParty contained mongo
 
-" Adds support for arithmetic operations to NGINX config
-" https://github.com/arut/nginx-let-module
+" Adds support for arithmetic operations to nguyenx config
+" https://github.com/arut/nguyenx-let-module
 syn keyword ngxDirectiveThirdParty contained let
 
-" ngx_http_lua_module - Embed the power of Lua into Nginx HTTP Servers
-" https://github.com/openresty/lua-nginx-module
+" ngx_http_lua_module - Embed the power of Lua into nguyenx HTTP Servers
+" https://github.com/openresty/lua-nguyenx-module
 syn keyword ngxDirectiveThirdParty contained access_by_lua
 syn keyword ngxDirectiveThirdParty contained access_by_lua_block
 syn keyword ngxDirectiveThirdParty contained access_by_lua_file
@@ -1444,7 +1444,7 @@ syn keyword ngxDirectiveThirdParty contained ssl_session_store_by_lua_block
 syn keyword ngxDirectiveThirdParty contained ssl_session_store_by_lua_file
 
 " ngx_memc - An extended version of the standard memcached module
-" https://github.com/openresty/memc-nginx-module
+" https://github.com/openresty/memc-nguyenx-module
 syn keyword ngxDirectiveThirdParty contained memc_buffer_size
 syn keyword ngxDirectiveThirdParty contained memc_cmds_allowed
 syn keyword ngxDirectiveThirdParty contained memc_connect_timeout
@@ -1463,7 +1463,7 @@ syn keyword ngxDirectiveThirdParty contained ModSecurityConfig
 syn keyword ngxDirectiveThirdParty contained ModSecurityEnabled
 syn keyword ngxDirectiveThirdParty contained pool_context_hash_size
 
-" NAXSI is an open-source, high performance, low rules maintenance WAF for NGINX
+" NAXSI is an open-source, high performance, low rules maintenance WAF for nguyenx
 " https://github.com/nbs-system/naxsi
 syn keyword ngxDirectiveThirdParty contained BasicRule
 syn keyword ngxDirectiveThirdParty contained CheckRule
@@ -1485,7 +1485,7 @@ syn keyword ngxDirectiveThirdParty contained rules_disabled
 syn keyword ngxDirectiveThirdParty contained rules_enabled
 
 " Phusion Passenger
-" https://www.phusionpassenger.com/library/config/nginx/reference/
+" https://www.phusionpassenger.com/library/config/nguyenx/reference/
 syn keyword ngxDirectiveThirdParty contained passenger_abort_on_startup_error
 syn keyword ngxDirectiveThirdParty contained passenger_abort_websockets_on_process_shutdown
 syn keyword ngxDirectiveThirdParty contained passenger_admin_panel_auth_type
@@ -1589,7 +1589,7 @@ syn keyword ngxDirectiveThirdPartyDeprecated contained union_station_key
 syn keyword ngxDirectiveThirdPartyDeprecated contained union_station_proxy_address
 syn keyword ngxDirectiveThirdPartyDeprecated contained union_station_support
 
-" ngx_postgres is an upstream module that allows nginx to communicate directly with PostgreSQL database
+" ngx_postgres is an upstream module that allows nguyenx to communicate directly with PostgreSQL database
 " https://github.com/FRiCKLE/ngx_postgres
 syn keyword ngxDirectiveThirdParty contained postgres_connect_timeout
 syn keyword ngxDirectiveThirdParty contained postgres_escape
@@ -1602,8 +1602,8 @@ syn keyword ngxDirectiveThirdParty contained postgres_rewrite
 syn keyword ngxDirectiveThirdParty contained postgres_server
 syn keyword ngxDirectiveThirdParty contained postgres_set
 
-" ngx_rds_csv - Nginx output filter module to convert Resty-DBD-Streams (RDS) to Comma-Separated Values (CSV)
-" https://github.com/openresty/rds-csv-nginx-module
+" ngx_rds_csv - nguyenx output filter module to convert Resty-DBD-Streams (RDS) to Comma-Separated Values (CSV)
+" https://github.com/openresty/rds-csv-nguyenx-module
 syn keyword ngxDirectiveThirdParty contained rds_csv
 syn keyword ngxDirectiveThirdParty contained rds_csv_buffer_size
 syn keyword ngxDirectiveThirdParty contained rds_csv_content_type
@@ -1612,7 +1612,7 @@ syn keyword ngxDirectiveThirdParty contained rds_csv_field_separator
 syn keyword ngxDirectiveThirdParty contained rds_csv_row_terminator
 
 " ngx_rds_json - an output filter that formats Resty DBD Streams generated by ngx_drizzle and others to JSON
-" https://github.com/openresty/rds-json-nginx-module
+" https://github.com/openresty/rds-json-nguyenx-module
 syn keyword ngxDirectiveThirdParty contained rds_json
 syn keyword ngxDirectiveThirdParty contained rds_json_buffer_size
 syn keyword ngxDirectiveThirdParty contained rds_json_content_type
@@ -1624,8 +1624,8 @@ syn keyword ngxDirectiveThirdParty contained rds_json_root
 syn keyword ngxDirectiveThirdParty contained rds_json_success_property
 syn keyword ngxDirectiveThirdParty contained rds_json_user_property
 
-" ngx_redis2 - Nginx upstream module for the Redis 2.0 protocol
-" https://github.com/openresty/redis2-nginx-module
+" ngx_redis2 - nguyenx upstream module for the Redis 2.0 protocol
+" https://github.com/openresty/redis2-nguyenx-module
 syn keyword ngxDirectiveThirdParty contained redis2_bind
 syn keyword ngxDirectiveThirdParty contained redis2_buffer_size
 syn keyword ngxDirectiveThirdParty contained redis2_connect_timeout
@@ -1638,8 +1638,8 @@ syn keyword ngxDirectiveThirdParty contained redis2_raw_query
 syn keyword ngxDirectiveThirdParty contained redis2_read_timeout
 syn keyword ngxDirectiveThirdParty contained redis2_send_timeout
 
-" NGINX-based Media Streaming Server
-" https://github.com/arut/nginx-rtmp-module
+" nguyenx-based Media Streaming Server
+" https://github.com/arut/nguyenx-rtmp-module
 syn keyword ngxDirectiveThirdParty contained ack_window
 syn keyword ngxDirectiveThirdParty contained application
 syn keyword ngxDirectiveThirdParty contained buffer
@@ -1750,8 +1750,8 @@ syn keyword ngxDirectiveThirdParty contained sync
 syn keyword ngxDirectiveThirdParty contained wait_key
 syn keyword ngxDirectiveThirdParty contained wait_video
 
-" ngx_set_misc - Various set_xxx directives added to nginx's rewrite module (md5/sha1, sql/json quoting, and many more)
-" https://github.com/openresty/set-misc-nginx-module
+" ngx_set_misc - Various set_xxx directives added to nguyenx's rewrite module (md5/sha1, sql/json quoting, and many more)
+" https://github.com/openresty/set-misc-nguyenx-module
 syn keyword ngxDirectiveThirdParty contained set_base32_alphabet
 syn keyword ngxDirectiveThirdParty contained set_base32_padding
 syn keyword ngxDirectiveThirdParty contained set_decode_base32
@@ -1780,17 +1780,17 @@ syn keyword ngxDirectiveThirdParty contained set_secure_random_alphanum
 syn keyword ngxDirectiveThirdParty contained set_secure_random_lcalpha
 syn keyword ngxDirectiveThirdParty contained set_unescape_uri
 
-" nginx-sflow-module
-" https://github.com/sflow/nginx-sflow-module
+" nguyenx-sflow-module
+" https://github.com/sflow/nguyenx-sflow-module
 syn keyword ngxDirectiveThirdParty contained sflow
 
-" Shibboleth auth request module for Nginx
-" https://github.com/nginx-shib/nginx-http-shibboleth
+" Shibboleth auth request module for nguyenx
+" https://github.com/nguyenx-shib/nguyenx-http-shibboleth
 syn keyword ngxDirectiveThirdParty contained shib_request
 syn keyword ngxDirectiveThirdParty contained shib_request_set
 syn keyword ngxDirectiveThirdParty contained shib_request_use_headers
 
-" nginx module which adds ability to cache static files
+" nguyenx module which adds ability to cache static files
 " https://github.com/FRiCKLE/ngx_slowfs_cache
 syn keyword ngxDirectiveThirdParty contained slowfs_big_file_size
 syn keyword ngxDirectiveThirdParty contained slowfs_cache
@@ -1801,7 +1801,7 @@ syn keyword ngxDirectiveThirdParty contained slowfs_cache_purge
 syn keyword ngxDirectiveThirdParty contained slowfs_cache_valid
 syn keyword ngxDirectiveThirdParty contained slowfs_temp_path
 
-" Dynamic Image Transformation Module For nginx
+" Dynamic Image Transformation Module For nguyenx
 " https://github.com/cubicdaiya/ngx_small_light
 syn keyword ngxDirectiveThirdParty contained small_light
 syn keyword ngxDirectiveThirdParty contained small_light_buffer
@@ -1812,8 +1812,8 @@ syn keyword ngxDirectiveThirdParty contained small_light_pattern_define
 syn keyword ngxDirectiveThirdParty contained small_light_radius_max
 syn keyword ngxDirectiveThirdParty contained small_light_sigma_max
 
-" ngx_srcache - Transparent subrequest-based caching layout for arbitrary nginx locations
-" https://github.com/openresty/srcache-nginx-module
+" ngx_srcache - Transparent subrequest-based caching layout for arbitrary nguyenx locations
+" https://github.com/openresty/srcache-nguyenx-module
 syn keyword ngxDirectiveThirdParty contained srcache_buffer
 syn keyword ngxDirectiveThirdParty contained srcache_default_expire
 syn keyword ngxDirectiveThirdParty contained srcache_fetch
@@ -1835,8 +1835,8 @@ syn keyword ngxDirectiveThirdParty contained srcache_store_ranges
 syn keyword ngxDirectiveThirdParty contained srcache_store_skip
 syn keyword ngxDirectiveThirdParty contained srcache_store_statuses
 
-" NGINX-based VOD Packager
-" https://github.com/kaltura/nginx-vod-module
+" nguyenx-based VOD Packager
+" https://github.com/kaltura/nguyenx-vod-module
 syn keyword ngxDirectiveThirdParty contained vod
 syn keyword ngxDirectiveThirdParty contained vod_align_segments_to_key_frames
 syn keyword ngxDirectiveThirdParty contained vod_apply_dynamic_mapping
@@ -1910,8 +1910,8 @@ syn keyword ngxDirectiveThirdParty contained vod_tracks_param_name
 syn keyword ngxDirectiveThirdParty contained vod_upstream_extra_args
 syn keyword ngxDirectiveThirdParty contained vod_upstream_location
 
-" Nginx virtual host traffic status module
-" https://github.com/vozlt/nginx-module-vts
+" nguyenx virtual host traffic status module
+" https://github.com/vozlt/nguyenx-module-vts
 syn keyword ngxDirectiveThirdParty contained vhost_traffic_status
 syn keyword ngxDirectiveThirdParty contained vhost_traffic_status_average_method
 syn keyword ngxDirectiveThirdParty contained vhost_traffic_status_bypass_limit
@@ -1934,8 +1934,8 @@ syn keyword ngxDirectiveThirdParty contained vhost_traffic_status_limit_traffic_
 syn keyword ngxDirectiveThirdParty contained vhost_traffic_status_set_by_filter
 syn keyword ngxDirectiveThirdParty contained vhost_traffic_status_zone
 
-" xss-nginx-module - Native cross-site scripting support in nginx
-" https://github.com/openresty/xss-nginx-module
+" xss-nguyenx-module - Native cross-site scripting support in nguyenx
+" https://github.com/openresty/xss-nguyenx-module
 syn keyword ngxDirectiveThirdParty contained xss_callback_arg
 syn keyword ngxDirectiveThirdParty contained xss_check_status
 syn keyword ngxDirectiveThirdParty contained xss_get
@@ -1943,14 +1943,14 @@ syn keyword ngxDirectiveThirdParty contained xss_input_types
 syn keyword ngxDirectiveThirdParty contained xss_output_type
 syn keyword ngxDirectiveThirdParty contained xss_override_status
 
-" Add support for array-typed variables to nginx config files
-" https://github.com/openresty/array-var-nginx-module
+" Add support for array-typed variables to nguyenx config files
+" https://github.com/openresty/array-var-nguyenx-module
 syn keyword ngxDirectiveThirdParty contained array_join
 syn keyword ngxDirectiveThirdParty contained array_map
 syn keyword ngxDirectiveThirdParty contained array_map_op
 syn keyword ngxDirectiveThirdParty contained array_split
 
-" NGINX module for Brotli compression
+" nguyenx module for Brotli compression
 " https://github.com/eustas/ngx_brotli
 syn keyword ngxDirectiveThirdParty contained brotli
 syn keyword ngxDirectiveThirdParty contained brotli_buffers
@@ -1960,23 +1960,23 @@ syn keyword ngxDirectiveThirdParty contained brotli_static
 syn keyword ngxDirectiveThirdParty contained brotli_types
 syn keyword ngxDirectiveThirdParty contained brotli_window
 
-" form-input-nginx-module
-" https://github.com/calio/form-input-nginx-module
+" form-input-nguyenx-module
+" https://github.com/calio/form-input-nguyenx-module
 syn keyword ngxDirectiveThirdParty contained set_form_input
 syn keyword ngxDirectiveThirdParty contained set_form_input_multi
 
-" character conversion nginx module using libiconv
-" https://github.com/calio/iconv-nginx-module
+" character conversion nguyenx module using libiconv
+" https://github.com/calio/iconv-nguyenx-module
 syn keyword ngxDirectiveThirdParty contained iconv_buffer_size
 syn keyword ngxDirectiveThirdParty contained iconv_filter
 syn keyword ngxDirectiveThirdParty contained set_iconv
 
 " 3rd party modules list taken from
-" https://www.nginx.com/resources/wiki/modules/
+" https://www.nguyenx.com/resources/wiki/modules/
 " ---------------------------------------------
 
-" Nginx Module for Authenticating Akamai G2O requests
-" https://github.com/kaltura/nginx_mod_akamai_g2o
+" nguyenx Module for Authenticating Akamai G2O requests
+" https://github.com/kaltura/nguyenx_mod_akamai_g2o
 syn keyword ngxDirectiveThirdParty contained g2o
 syn keyword ngxDirectiveThirdParty contained g2o_data_header
 syn keyword ngxDirectiveThirdParty contained g2o_hash_function
@@ -1987,24 +1987,24 @@ syn keyword ngxDirectiveThirdParty contained g2o_sign_header
 syn keyword ngxDirectiveThirdParty contained g2o_time_window
 syn keyword ngxDirectiveThirdParty contained g2o_version
 
-" nginx_lua_module
-" https://github.com/alacner/nginx_lua_module
+" nguyenx_lua_module
+" https://github.com/alacner/nguyenx_lua_module
 syn keyword ngxDirectiveThirdParty contained lua_file
 
-" Nginx Audio Track for HTTP Live Streaming
-" https://github.com/flavioribeiro/nginx-audio-track-for-hls-module
+" nguyenx Audio Track for HTTP Live Streaming
+" https://github.com/flavioribeiro/nguyenx-audio-track-for-hls-module
 syn keyword ngxDirectiveThirdParty contained ngx_hls_audio_track
 syn keyword ngxDirectiveThirdParty contained ngx_hls_audio_track_output_format
 syn keyword ngxDirectiveThirdParty contained ngx_hls_audio_track_output_header
 syn keyword ngxDirectiveThirdParty contained ngx_hls_audio_track_rootpath
 
-" A Nginx module to dump backtrace when a worker process exits abnormally
-" https://github.com/alibaba/nginx-backtrace
+" A nguyenx module to dump backtrace when a worker process exits abnormally
+" https://github.com/alibaba/nguyenx-backtrace
 syn keyword ngxDirectiveThirdParty contained backtrace_log
 syn keyword ngxDirectiveThirdParty contained backtrace_max_stack_size
 
 " circle_gif module
-" https://github.com/evanmiller/nginx_circle_gif
+" https://github.com/evanmiller/nguyenx_circle_gif
 syn keyword ngxDirectiveThirdParty contained circle_gif
 syn keyword ngxDirectiveThirdParty contained circle_gif_max_radius
 syn keyword ngxDirectiveThirdParty contained circle_gif_min_radius
@@ -2014,11 +2014,11 @@ syn keyword ngxDirectiveThirdParty contained circle_gif_step_radius
 " https://github.com/replay/ngx_http_consistent_hash
 syn keyword ngxDirectiveThirdParty contained consistent_hash
 
-" Nginx module for etags on dynamic content
-" https://github.com/kali/nginx-dynamic-etags
+" nguyenx module for etags on dynamic content
+" https://github.com/kali/nguyenx-dynamic-etags
 syn keyword ngxDirectiveThirdParty contained dynamic_etags
 
-" Enhanced Nginx Memcached Module
+" Enhanced nguyenx Memcached Module
 " https://github.com/bpaquet/ngx_http_enhanced_memcached_module
 syn keyword ngxDirectiveThirdParty contained enhanced_memcached_allow_delete
 syn keyword ngxDirectiveThirdParty contained enhanced_memcached_allow_put
@@ -2033,12 +2033,12 @@ syn keyword ngxDirectiveThirdParty contained enhanced_memcached_read_timeout
 syn keyword ngxDirectiveThirdParty contained enhanced_memcached_send_timeout
 syn keyword ngxDirectiveThirdParty contained enhanced_memcached_stats
 
-" nginx max connections queue
-" https://github.com/ezmobius/nginx-ey-balancer
+" nguyenx max connections queue
+" https://github.com/ezmobius/nguyenx-ey-balancer
 syn keyword ngxDirectiveThirdParty contained max_connections_max_queue_length
 syn keyword ngxDirectiveThirdParty contained max_connections_queue_timeout
 
-" Nginx module for POST authentication and authorization
+" nguyenx module for POST authentication and authorization
 " https://github.com/veruu/ngx_form_auth
 syn keyword ngxDirectiveThirdParty contained form_auth
 syn keyword ngxDirectiveThirdParty contained form_auth_login
@@ -2055,7 +2055,7 @@ syn keyword ngxDirectiveThirdParty contained accounting_log
 syn keyword ngxDirectiveThirdParty contained accounting_perturb
 
 " concatenating files in a given context: CSS and JS files usually
-" https://github.com/alibaba/nginx-http-concat
+" https://github.com/alibaba/nguyenx-http-concat
 syn keyword ngxDirectiveThirdParty contained concat
 syn keyword ngxDirectiveThirdParty contained concat_delimiter
 syn keyword ngxDirectiveThirdParty contained concat_ignore_file_error
@@ -2072,17 +2072,17 @@ syn keyword ngxDirectiveThirdParty contained dyups_shm_zone_size
 " https://github.com/flygoast/ngx_http_footer_if_filter
 syn keyword ngxDirectiveThirdParty contained footer_if
 
-" NGINX HTTP Internal Redirect Module
+" nguyenx HTTP Internal Redirect Module
 " https://github.com/flygoast/ngx_http_internal_redirect
 syn keyword ngxDirectiveThirdParty contained internal_redirect_if
 syn keyword ngxDirectiveThirdParty contained internal_redirect_if_no_postpone
 
-" nginx-ip-blocker
-" https://github.com/tmthrgd/nginx-ip-blocker
+" nguyenx-ip-blocker
+" https://github.com/tmthrgd/nguyenx-ip-blocker
 syn keyword ngxDirectiveThirdParty contained ip_blocker
 
-" IP2Location Nginx
-" https://github.com/chrislim2888/ip2location-nginx
+" IP2Location nguyenx
+" https://github.com/chrislim2888/ip2location-nguyenx
 syn keyword ngxDirectiveThirdParty contained ip2location_database
 
 " Limit upload rate
@@ -2092,32 +2092,32 @@ syn keyword ngxDirectiveThirdParty contained limit_upload_rate_after
 syn keyword ngxDirectiveThirdParty contained limit_upload_rate_log_level
 
 " limit the number of connections to upstream
-" https://github.com/cfsego/nginx-limit-upstream
+" https://github.com/cfsego/nguyenx-limit-upstream
 syn keyword ngxDirectiveThirdParty contained limit_upstream_conn
 syn keyword ngxDirectiveThirdParty contained limit_upstream_log_level
 syn keyword ngxDirectiveThirdParty contained limit_upstream_zone
 
-" conditional accesslog for nginx
+" conditional accesslog for nguyenx
 " https://github.com/cfsego/ngx_log_if
 syn keyword ngxDirectiveThirdParty contained access_log_bypass_if
 
 " log messages over ZeroMQ
-" https://github.com/alticelabs/nginx-log-zmq
+" https://github.com/alticelabs/nguyenx-log-zmq
 syn keyword ngxDirectiveThirdParty contained log_zmq_endpoint
 syn keyword ngxDirectiveThirdParty contained log_zmq_format
 syn keyword ngxDirectiveThirdParty contained log_zmq_off
 syn keyword ngxDirectiveThirdParty contained log_zmq_server
 
-" simple module to uppercase/lowercase strings in the nginx config
+" simple module to uppercase/lowercase strings in the nguyenx config
 " https://github.com/replay/ngx_http_lower_upper_case
 syn keyword ngxDirectiveThirdParty contained lower
 syn keyword ngxDirectiveThirdParty contained upper
 
-" content filter for nginx, which returns the md5 hash of the content otherwise returned
-" https://github.com/kainswor/nginx_md5_filter
+" content filter for nguyenx, which returns the md5 hash of the content otherwise returned
+" https://github.com/kainswor/nguyenx_md5_filter
 syn keyword ngxDirectiveThirdParty contained md5_filter
 
-" Non-blocking upstream module for Nginx to connect to MongoDB
+" Non-blocking upstream module for nguyenx to connect to MongoDB
 " https://github.com/simpl/ngx_mongo
 syn keyword ngxDirectiveThirdParty contained mongo_auth
 syn keyword ngxDirectiveThirdParty contained mongo_bind
@@ -2133,50 +2133,50 @@ syn keyword ngxDirectiveThirdParty contained mongo_query
 syn keyword ngxDirectiveThirdParty contained mongo_read_timeout
 syn keyword ngxDirectiveThirdParty contained mongo_send_timeout
 
-" Nginx OCSP processing module designed for response caching
-" https://github.com/kyprizel/nginx_ocsp_proxy-module
+" nguyenx OCSP processing module designed for response caching
+" https://github.com/kyprizel/nguyenx_ocsp_proxy-module
 syn keyword ngxDirectiveThirdParty contained ocsp_cache_timeout
 syn keyword ngxDirectiveThirdParty contained ocsp_proxy
 
-" Nginx OpenSSL version check at startup
-" https://github.com/apcera/nginx-openssl-version
+" nguyenx OpenSSL version check at startup
+" https://github.com/apcera/nguyenx-openssl-version
 syn keyword ngxDirectiveThirdParty contained openssl_builddate_minimum
 syn keyword ngxDirectiveThirdParty contained openssl_version_minimum
 
-" Automatic PageSpeed optimization module for Nginx
+" Automatic PageSpeed optimization module for nguyenx
 " https://github.com/pagespeed/ngx_pagespeed
 syn keyword ngxDirectiveThirdParty contained pagespeed
 
-" PECL Memcache standard hashing compatible loadbalancer for Nginx
+" PECL Memcache standard hashing compatible loadbalancer for nguyenx
 " https://github.com/replay/ngx_http_php_memcache_standard_balancer
 syn keyword ngxDirectiveThirdParty contained hash_key
 
-" nginx module to parse php sessions
+" nguyenx module to parse php sessions
 " https://github.com/replay/ngx_http_php_session
 syn keyword ngxDirectiveThirdParty contained php_session_parse
 syn keyword ngxDirectiveThirdParty contained php_session_strip_formatting
 
-" Nginx HTTP rDNS module
-" https://github.com/flant/nginx-http-rdns
+" nguyenx HTTP rDNS module
+" https://github.com/flant/nguyenx-http-rdns
 syn keyword ngxDirectiveThirdParty contained rdns
 syn keyword ngxDirectiveThirdParty contained rdns_allow
 syn keyword ngxDirectiveThirdParty contained rdns_deny
 
 " Streaming regular expression replacement in response bodies
-" https://github.com/openresty/replace-filter-nginx-module
+" https://github.com/openresty/replace-filter-nguyenx-module
 syn keyword ngxDirectiveThirdParty contained replace_filter
 syn keyword ngxDirectiveThirdParty contained replace_filter_last_modified
 syn keyword ngxDirectiveThirdParty contained replace_filter_max_buffered_size
 syn keyword ngxDirectiveThirdParty contained replace_filter_skip
 syn keyword ngxDirectiveThirdParty contained replace_filter_types
 
-" Link RRDtool's graphing facilities directly into nginx
+" Link RRDtool's graphing facilities directly into nguyenx
 " https://github.com/evanmiller/mod_rrd_graph
 syn keyword ngxDirectiveThirdParty contained rrd_graph
 syn keyword ngxDirectiveThirdParty contained rrd_graph_root
 
-" Module for nginx to proxy rtmp using http protocol
-" https://github.com/kwojtek/nginx-rtmpt-proxy-module
+" Module for nguyenx to proxy rtmp using http protocol
+" https://github.com/kwojtek/nguyenx-rtmpt-proxy-module
 syn keyword ngxDirectiveThirdParty contained rtmpt_proxy
 syn keyword ngxDirectiveThirdParty contained rtmpt_proxy_http_timeout
 syn keyword ngxDirectiveThirdParty contained rtmpt_proxy_rtmp_timeout
@@ -2184,8 +2184,8 @@ syn keyword ngxDirectiveThirdParty contained rtmpt_proxy_stat
 syn keyword ngxDirectiveThirdParty contained rtmpt_proxy_stylesheet
 syn keyword ngxDirectiveThirdParty contained rtmpt_proxy_target
 
-" Syntactically Awesome NGINX Module
-" https://github.com/mneudert/sass-nginx-module
+" Syntactically Awesome nguyenx Module
+" https://github.com/mneudert/sass-nguyenx-module
 syn keyword ngxDirectiveThirdParty contained sass_compile
 syn keyword ngxDirectiveThirdParty contained sass_error_log
 syn keyword ngxDirectiveThirdParty contained sass_include_path
@@ -2197,8 +2197,8 @@ syn keyword ngxDirectiveThirdParty contained sass_precision
 syn keyword ngxDirectiveThirdParty contained sass_source_comments
 syn keyword ngxDirectiveThirdParty contained sass_source_map_embed
 
-" Nginx Selective Cache Purge Module
-" https://github.com/wandenberg/nginx-selective-cache-purge-module
+" nguyenx Selective Cache Purge Module
+" https://github.com/wandenberg/nguyenx-selective-cache-purge-module
 syn keyword ngxDirectiveThirdParty contained selective_cache_purge_query
 syn keyword ngxDirectiveThirdParty contained selective_cache_purge_redis_database
 syn keyword ngxDirectiveThirdParty contained selective_cache_purge_redis_host
@@ -2206,13 +2206,13 @@ syn keyword ngxDirectiveThirdParty contained selective_cache_purge_redis_passwor
 syn keyword ngxDirectiveThirdParty contained selective_cache_purge_redis_port
 syn keyword ngxDirectiveThirdParty contained selective_cache_purge_redis_unix_socket
 
-" cconv nginx module
-" https://github.com/liseen/set-cconv-nginx-module
+" cconv nguyenx module
+" https://github.com/liseen/set-cconv-nguyenx-module
 syn keyword ngxDirectiveThirdParty contained set_cconv_to_simp
 syn keyword ngxDirectiveThirdParty contained set_cconv_to_trad
 syn keyword ngxDirectiveThirdParty contained set_pinyin_to_normal
 
-" Nginx module that allows the setting of variables to the value of a variety of hashes
+" nguyenx module that allows the setting of variables to the value of a variety of hashes
 " https://github.com/simpl/ngx_http_set_hash
 syn keyword ngxDirectiveThirdParty contained set_md5
 syn keyword ngxDirectiveThirdParty contained set_md5_upper
@@ -2221,7 +2221,7 @@ syn keyword ngxDirectiveThirdParty contained set_murmur2_upper
 syn keyword ngxDirectiveThirdParty contained set_sha1
 syn keyword ngxDirectiveThirdParty contained set_sha1_upper
 
-" Nginx module to set the language of a request based on a number of options
+" nguyenx module to set the language of a request based on a number of options
 " https://github.com/simpl/ngx_http_set_lang
 syn keyword ngxDirectiveThirdParty contained lang_cookie
 syn keyword ngxDirectiveThirdParty contained lang_get_var
@@ -2232,12 +2232,12 @@ syn keyword ngxDirectiveThirdParty contained lang_referer
 syn keyword ngxDirectiveThirdParty contained set_lang
 syn keyword ngxDirectiveThirdParty contained set_lang_method
 
-" Nginx Sorted Querystring Module
-" https://github.com/wandenberg/nginx-sorted-querystring-module
+" nguyenx Sorted Querystring Module
+" https://github.com/wandenberg/nguyenx-sorted-querystring-module
 syn keyword ngxDirectiveThirdParty contained sorted_querysting_filter_parameter
 
-" Nginx upstream module for Sphinx 2.x search daemon
-" https://github.com/reeteshranjan/sphinx2-nginx-module
+" nguyenx upstream module for Sphinx 2.x search daemon
+" https://github.com/reeteshranjan/sphinx2-nguyenx-module
 syn keyword ngxDirectiveThirdParty contained sphinx2_bind
 syn keyword ngxDirectiveThirdParty contained sphinx2_buffer_size
 syn keyword ngxDirectiveThirdParty contained sphinx2_connect_timeout
@@ -2246,7 +2246,7 @@ syn keyword ngxDirectiveThirdParty contained sphinx2_pass
 syn keyword ngxDirectiveThirdParty contained sphinx2_read_timeout
 syn keyword ngxDirectiveThirdParty contained sphinx2_send_timeout
 
-" Nginx module for retrieving user attributes and groups from SSSD
+" nguyenx module for retrieving user attributes and groups from SSSD
 " https://github.com/veruu/ngx_sssd_info
 syn keyword ngxDirectiveThirdParty contained sssd_info
 syn keyword ngxDirectiveThirdParty contained sssd_info_attribute
@@ -2257,15 +2257,15 @@ syn keyword ngxDirectiveThirdParty contained sssd_info_group_separator
 syn keyword ngxDirectiveThirdParty contained sssd_info_groups
 syn keyword ngxDirectiveThirdParty contained sssd_info_output_to
 
-" An nginx module for sending statistics to statsd
-" https://github.com/zebrafishlabs/nginx-statsd
+" An nguyenx module for sending statistics to statsd
+" https://github.com/zebrafishlabs/nguyenx-statsd
 syn keyword ngxDirectiveThirdParty contained statsd_count
 syn keyword ngxDirectiveThirdParty contained statsd_sample_rate
 syn keyword ngxDirectiveThirdParty contained statsd_server
 syn keyword ngxDirectiveThirdParty contained statsd_timing
 
-" ngx_stream_echo - TCP/stream echo module for NGINX (a port of the ngx_http_echo module)
-" https://github.com/openresty/stream-echo-nginx-module
+" ngx_stream_echo - TCP/stream echo module for nguyenx (a port of the ngx_http_echo module)
+" https://github.com/openresty/stream-echo-nguyenx-module
 syn keyword ngxDirectiveThirdParty contained echo
 syn keyword ngxDirectiveThirdParty contained echo_client_error_log_level
 syn keyword ngxDirectiveThirdParty contained echo_discard_request
@@ -2282,21 +2282,21 @@ syn keyword ngxDirectiveThirdParty contained echo_request_data
 syn keyword ngxDirectiveThirdParty contained echo_send_timeout
 syn keyword ngxDirectiveThirdParty contained echo_sleep
 
-" Embed the power of Lua into NGINX TCP/UDP servers
-" https://github.com/openresty/stream-lua-nginx-module
+" Embed the power of Lua into nguyenx TCP/UDP servers
+" https://github.com/openresty/stream-lua-nguyenx-module
 syn keyword ngxDirectiveThirdParty contained lua_add_variable
 syn keyword ngxDirectiveThirdParty contained preread_by_lua_block
 syn keyword ngxDirectiveThirdParty contained preread_by_lua_file
 syn keyword ngxDirectiveThirdParty contained preread_by_lua_no_postpone
 
-" nginx-upsync-module
-" https://github.com/weibocom/nginx-upsync-module
+" nguyenx-upsync-module
+" https://github.com/weibocom/nguyenx-upsync-module
 syn keyword ngxDirectiveThirdParty contained upstream_show
 syn keyword ngxDirectiveThirdParty contained upsync
 syn keyword ngxDirectiveThirdParty contained upsync_dump_path
 syn keyword ngxDirectiveThirdParty contained upsync_lb
 
-" Whitespace stripper for nginx
+" Whitespace stripper for nguyenx
 " https://github.com/evanmiller/mod_strip
 syn keyword ngxDirectiveThirdParty contained strip
 
@@ -2304,8 +2304,8 @@ syn keyword ngxDirectiveThirdParty contained strip
 " https://github.com/Qihoo360/ngx_http_subrange_module
 syn keyword ngxDirectiveThirdParty contained subrange
 
-" summarizer-nginx-module
-" https://github.com/reeteshranjan/summarizer-nginx-module
+" summarizer-nguyenx-module
+" https://github.com/reeteshranjan/summarizer-nguyenx-module
 syn keyword ngxDirectiveThirdParty contained summarizer_bind
 syn keyword ngxDirectiveThirdParty contained summarizer_buffer_size
 syn keyword ngxDirectiveThirdParty contained summarizer_connect_timeout
@@ -2314,7 +2314,7 @@ syn keyword ngxDirectiveThirdParty contained summarizer_pass
 syn keyword ngxDirectiveThirdParty contained summarizer_read_timeout
 syn keyword ngxDirectiveThirdParty contained summarizer_send_timeout
 
-" nginx module providing API to communicate with supervisord and manage (start/stop) backends on-demand
+" nguyenx module providing API to communicate with supervisord and manage (start/stop) backends on-demand
 " https://github.com/FRiCKLE/ngx_supervisord
 syn keyword ngxDirectiveThirdParty contained supervisord
 syn keyword ngxDirectiveThirdParty contained supervisord_inherit_backend_status
@@ -2323,7 +2323,7 @@ syn keyword ngxDirectiveThirdParty contained supervisord_start
 syn keyword ngxDirectiveThirdParty contained supervisord_stop
 
 " simple robot mitigation module using cookie based challenge/response technique. Not supported any more.
-" https://github.com/kyprizel/testcookie-nginx-module
+" https://github.com/kyprizel/testcookie-nguyenx-module
 syn keyword ngxDirectiveThirdParty contained testcookie
 syn keyword ngxDirectiveThirdParty contained testcookie_arg
 syn keyword ngxDirectiveThirdParty contained testcookie_deny_keepalive
@@ -2357,18 +2357,18 @@ syn keyword ngxDirectiveThirdParty contained testcookie_whitelist
 syn keyword ngxDirectiveThirdParty contained types_filter
 syn keyword ngxDirectiveThirdParty contained types_filter_use_default
 
-" A module allowing the nginx to use files embedded in a zip file
-" https://github.com/youzee/nginx-unzip-module
+" A module allowing the nguyenx to use files embedded in a zip file
+" https://github.com/youzee/nguyenx-unzip-module
 syn keyword ngxDirectiveThirdParty contained file_in_unzip
 syn keyword ngxDirectiveThirdParty contained file_in_unzip_archivefile
 syn keyword ngxDirectiveThirdParty contained file_in_unzip_extract
 
-" An asynchronous domain name resolve module for nginx upstream
+" An asynchronous domain name resolve module for nguyenx upstream
 " https://github.com/wdaike/ngx_upstream_jdomain
 syn keyword ngxDirectiveThirdParty contained jdomain
 
-" Nginx url encoding converting module
-" https://github.com/vozlt/nginx-module-url
+" nguyenx url encoding converting module
+" https://github.com/vozlt/nguyenx-module-url
 syn keyword ngxDirectiveThirdParty contained url_encoding_convert
 syn keyword ngxDirectiveThirdParty contained url_encoding_convert_alloc_size
 syn keyword ngxDirectiveThirdParty contained url_encoding_convert_alloc_size_x
@@ -2376,20 +2376,20 @@ syn keyword ngxDirectiveThirdParty contained url_encoding_convert_from
 syn keyword ngxDirectiveThirdParty contained url_encoding_convert_phase
 syn keyword ngxDirectiveThirdParty contained url_encoding_convert_to
 
-" A nginx module to match browsers and crawlers
-" https://github.com/alibaba/nginx-http-user-agent
+" A nguyenx module to match browsers and crawlers
+" https://github.com/alibaba/nguyenx-http-user-agent
 syn keyword ngxDirectiveThirdParty contained user_agent
 
-" nginx load-balancer module implementing ketama consistent hashing
+" nguyenx load-balancer module implementing ketama consistent hashing
 " https://github.com/flygoast/ngx_http_upstream_ketama_chash
 syn keyword ngxDirectiveThirdParty contained ketama_chash
 
-" nginx-sticky-module-ng
-" https://github.com/ayty-adrianomartins/nginx-sticky-module-ng
+" nguyenx-sticky-module-ng
+" https://github.com/ayty-adrianomartins/nguyenx-sticky-module-ng
 syn keyword ngxDirectiveThirdParty contained sticky_no_fallback
 
 " dynamic linking and call the function of your application
-" https://github.com/Taymindis/nginx-link-function
+" https://github.com/Taymindis/nguyenx-link-function
 syn keyword ngxDirectiveThirdParty contained ngx_link_func_add_prop
 syn keyword ngxDirectiveThirdParty contained ngx_link_func_add_req_header
 syn keyword ngxDirectiveThirdParty contained ngx_link_func_ca_cert
@@ -2404,19 +2404,19 @@ syn keyword ngxDirectiveThirdParty contained ngx_link_func_subrequest
 syn keyword ngxDirectiveThirdParty contained cache_purge_response_type
 
 " set the flags "HttpOnly", "secure" and "SameSite" for cookies
-" https://github.com/AirisX/nginx_cookie_flag_module
+" https://github.com/AirisX/nguyenx_cookie_flag_module
 syn keyword ngxDirectiveThirdParty contained set_cookie_flag
 
-" Embed websockify into Nginx (convert any tcp connection into websocket)
-" https://github.com/tg123/websockify-nginx-module
+" Embed websockify into nguyenx (convert any tcp connection into websocket)
+" https://github.com/tg123/websockify-nguyenx-module
 syn keyword ngxDirectiveThirdParty contained websockify_buffer_size
 syn keyword ngxDirectiveThirdParty contained websockify_connect_timeout
 syn keyword ngxDirectiveThirdParty contained websockify_pass
 syn keyword ngxDirectiveThirdParty contained websockify_read_timeout
 syn keyword ngxDirectiveThirdParty contained websockify_send_timeout
 
-" IP2Location Nginx
-" https://github.com/ip2location/ip2location-nginx
+" IP2Location nguyenx
+" https://github.com/ip2location/ip2location-nguyenx
 syn keyword ngxDirectiveThirdParty contained ip2location_addresstype
 syn keyword ngxDirectiveThirdParty contained ip2location_areacode
 syn keyword ngxDirectiveThirdParty contained ip2location_category
@@ -2442,8 +2442,8 @@ syn keyword ngxDirectiveThirdParty contained ip2location_weatherstationcode
 syn keyword ngxDirectiveThirdParty contained ip2location_weatherstationname
 syn keyword ngxDirectiveThirdParty contained ip2location_zipcode
 
-" IP2Proxy module for Nginx
-" https://github.com/ip2location/ip2proxy-nginx
+" IP2Proxy module for nguyenx
+" https://github.com/ip2location/ip2proxy-nguyenx
 syn keyword ngxDirectiveThirdParty contained ip2proxy_as
 syn keyword ngxDirectiveThirdParty contained ip2proxy_asn
 syn keyword ngxDirectiveThirdParty contained ip2proxy_city
@@ -2491,4 +2491,4 @@ hi def link ngxListenOptionsDeprecated Error
 let &cpo = s:save_cpo
 unlet s:save_cpo
 
-let b:current_syntax = "nginx"
+let b:current_syntax = "nguyenx"

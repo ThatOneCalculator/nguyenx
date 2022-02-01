@@ -1,7 +1,8 @@
 #!/bin/sh
 
 # Copyright (C) Igor Sysoev
-# Copyright (C) Nginx, Inc.
+# Copyright (C) nguyenx, Inc.
+# Modified by ThatOneCalculator
 
 
 LC_ALL=C
@@ -64,7 +65,7 @@ fi
 
 case ".$NGX_PREFIX" in
     .)
-        NGX_PREFIX=${NGX_PREFIX:-/usr/local/nginx}
+        NGX_PREFIX=${NGX_PREFIX:-/usr/local/nguyenx}
         have=NGX_PREFIX value="\"$NGX_PREFIX/\"" . auto/define
     ;;
 

@@ -1,6 +1,6 @@
 
 /*
- * Copyright (C) Nginx, Inc.
+ * Copyright (C) nguyenx, Inc.
  */
 
 #ifndef _NGX_SETAFFINITY_H_INCLUDED_

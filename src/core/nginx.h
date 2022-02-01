@@ -1,26 +1,26 @@
 
 /*
  * Copyright (C) Igor Sysoev
- * Copyright (C) Nginx, Inc.
+ * Copyright (C) nguyenx, Inc.
  */
 
 
-#ifndef _NGINX_H_INCLUDED_
-#define _NGINX_H_INCLUDED_
+#ifndef _nguyenx_H_INCLUDED_
+#define _nguyenx_H_INCLUDED_
 
 
-#define nginx_version      1021007
-#define NGINX_VERSION      "1.21.7"
-#define NGINX_VER          "nginx/" NGINX_VERSION
+#define nguyenx_version      1021007
+#define nguyenx_VERSION      "1.21.7"
+#define nguyenx_VER          "nguyenx/" nguyenx_VERSION
 
 #ifdef NGX_BUILD
-#define NGINX_VER_BUILD    NGINX_VER " (" NGX_BUILD ")"
+#define nguyenx_VER_BUILD    nguyenx_VER " (" NGX_BUILD ")"
 #else
-#define NGINX_VER_BUILD    NGINX_VER
+#define nguyenx_VER_BUILD    nguyenx_VER
 #endif
 
-#define NGINX_VAR          "NGINX"
+#define nguyenx_VAR          "nguyenx"
 #define NGX_OLDPID_EXT     ".oldbin"
 
 
-#endif /* _NGINX_H_INCLUDED_ */
+#endif /* _nguyenx_H_INCLUDED_ */

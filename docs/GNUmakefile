@@ -1,39 +1,39 @@
 
-VER=	$(shell grep 'define NGINX_VERSION' src/core/nginx.h		\
+VER=	$(shell grep 'define nguyenx_VERSION' src/core/nguyenx.h		\
 		| sed -e 's/^.*"\(.*\)".*/\1/')
-NGINX=	nginx-$(VER)
+nguyenx=	nguyenx-$(VER)
 TEMP=	tmp
 XSLS?=	xslscript.pl
 
 
 all:		changes
 
-changes:	$(TEMP)/$(NGINX)/CHANGES.ru				\
-		$(TEMP)/$(NGINX)/CHANGES
+changes:	$(TEMP)/$(nguyenx)/CHANGES.ru				\
+		$(TEMP)/$(nguyenx)/CHANGES
 
 
-$(TEMP)/$(NGINX)/CHANGES.ru:	docs/dtd/changes.dtd			\
-				docs/xml/nginx/changes.xml		\
+$(TEMP)/$(nguyenx)/CHANGES.ru:	docs/dtd/changes.dtd			\
+				docs/xml/nguyenx/changes.xml		\
 				docs/xml/change_log_conf.xml		\
 				docs/xslt/changes.xslt
 
-	mkdir -p $(TEMP)/$(NGINX)
+	mkdir -p $(TEMP)/$(nguyenx)
 
-	xmllint --noout --valid docs/xml/nginx/changes.xml
+	xmllint --noout --valid docs/xml/nguyenx/changes.xml
 	xsltproc --stringparam lang ru					\
-		-o $@ docs/xslt/changes.xslt docs/xml/nginx/changes.xml
+		-o $@ docs/xslt/changes.xslt docs/xml/nguyenx/changes.xml
 
 
-$(TEMP)/$(NGINX)/CHANGES:	docs/dtd/changes.dtd			\
-				docs/xml/nginx/changes.xml		\
+$(TEMP)/$(nguyenx)/CHANGES:	docs/dtd/changes.dtd			\
+				docs/xml/nguyenx/changes.xml		\
 				docs/xml/change_log_conf.xml		\
 				docs/xslt/changes.xslt
 
-	mkdir -p $(TEMP)/$(NGINX)
+	mkdir -p $(TEMP)/$(nguyenx)
 
-	xmllint --noout --valid docs/xml/nginx/changes.xml
+	xmllint --noout --valid docs/xml/nguyenx/changes.xml
 	xsltproc --stringparam lang en					\
-		-o $@ docs/xslt/changes.xslt docs/xml/nginx/changes.xml
+		-o $@ docs/xslt/changes.xslt docs/xml/nguyenx/changes.xml
 
 
 docs/xslt/changes.xslt:		docs/xsls/changes.xsls

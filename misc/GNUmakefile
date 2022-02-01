@@ -1,7 +1,7 @@
 
-VER =		$(shell grep 'define NGINX_VERSION' src/core/nginx.h	\
+VER =		$(shell grep 'define nguyenx_VERSION' src/core/nguyenx.h	\
 			| sed -e 's/^.*"\(.*\)".*/\1/')
-NGINX =		nginx-$(VER)
+nguyenx =		nguyenx-$(VER)
 TEMP =		tmp
 
 CC =		cl
@@ -13,34 +13,34 @@ PCRE =		pcre2-10.39
 
 release: export
 
-	mv $(TEMP)/$(NGINX)/auto/configure $(TEMP)/$(NGINX)
+	mv $(TEMP)/$(nguyenx)/auto/configure $(TEMP)/$(nguyenx)
 
 	# delete incomplete sources
-	rm $(TEMP)/$(NGINX)/src/event/ngx_event_acceptex.c
-	rm $(TEMP)/$(NGINX)/src/event/ngx_event_connectex.c
-	rm $(TEMP)/$(NGINX)/src/event/modules/ngx_iocp_module.*
-	rm -r $(TEMP)/$(NGINX)/src/os/win32
+	rm $(TEMP)/$(nguyenx)/src/event/ngx_event_acceptex.c
+	rm $(TEMP)/$(nguyenx)/src/event/ngx_event_connectex.c
+	rm $(TEMP)/$(nguyenx)/src/event/modules/ngx_iocp_module.*
+	rm -r $(TEMP)/$(nguyenx)/src/os/win32
 
-	mv $(TEMP)/$(NGINX)/docs/text/LICENSE $(TEMP)/$(NGINX)
-	mv $(TEMP)/$(NGINX)/docs/text/README $(TEMP)/$(NGINX)
-	mv $(TEMP)/$(NGINX)/docs/html $(TEMP)/$(NGINX)
-	mv $(TEMP)/$(NGINX)/docs/man $(TEMP)/$(NGINX)
+	mv $(TEMP)/$(nguyenx)/docs/text/LICENSE $(TEMP)/$(nguyenx)
+	mv $(TEMP)/$(nguyenx)/docs/text/README $(TEMP)/$(nguyenx)
+	mv $(TEMP)/$(nguyenx)/docs/html $(TEMP)/$(nguyenx)
+	mv $(TEMP)/$(nguyenx)/docs/man $(TEMP)/$(nguyenx)
 
 	$(MAKE) -f docs/GNUmakefile changes
 
-	rm -r $(TEMP)/$(NGINX)/docs
-	rm -r $(TEMP)/$(NGINX)/misc
+	rm -r $(TEMP)/$(nguyenx)/docs
+	rm -r $(TEMP)/$(nguyenx)/misc
 
-	tar -c -z -f $(NGINX).tar.gz --directory $(TEMP) $(NGINX)
+	tar -c -z -f $(nguyenx).tar.gz --directory $(TEMP) $(nguyenx)
 
 
 export:
 	rm -rf $(TEMP)
-	hg archive -X '.hg*' $(TEMP)/$(NGINX)
+	hg archive -X '.hg*' $(TEMP)/$(nguyenx)
 
 
 RELEASE:
-	hg ci -m nginx-$(VER)-RELEASE
+	hg ci -m nguyenx-$(VER)-RELEASE
 	hg tag -m "release-$(VER) tag" release-$(VER)
 
 	$(MAKE) -f misc/GNUmakefile release
@@ -52,11 +52,11 @@ win32:
 		--builddir=$(OBJS)					\
 		--with-debug						\
 		--prefix= 						\
-		--conf-path=conf/nginx.conf				\
-		--pid-path=logs/nginx.pid				\
+		--conf-path=conf/nguyenx.conf				\
+		--pid-path=logs/nguyenx.pid				\
 		--http-log-path=logs/access.log				\
 		--error-log-path=logs/error.log				\
-		--sbin-path=nginx.exe					\
+		--sbin-path=nguyenx.exe					\
 		--http-client-body-temp-path=temp/client_body_temp	\
 		--http-proxy-temp-path=temp/proxy_temp			\
 		--http-fastcgi-temp-path=temp/fastcgi_temp		\
@@ -89,66 +89,66 @@ win32:
 
 
 zip: export
-	rm -f $(NGINX).zip
+	rm -f $(nguyenx).zip
 
-	mkdir -p $(TEMP)/$(NGINX)/docs.new
-	mkdir -p $(TEMP)/$(NGINX)/logs
-	mkdir -p $(TEMP)/$(NGINX)/temp
+	mkdir -p $(TEMP)/$(nguyenx)/docs.new
+	mkdir -p $(TEMP)/$(nguyenx)/logs
+	mkdir -p $(TEMP)/$(nguyenx)/temp
 
-	sed -i '' -e "s/$$/`printf '\r'`/" $(TEMP)/$(NGINX)/conf/*
+	sed -i '' -e "s/$$/`printf '\r'`/" $(TEMP)/$(nguyenx)/conf/*
 
-	mv $(TEMP)/$(NGINX)/docs/text/LICENSE $(TEMP)/$(NGINX)/docs.new
-	mv $(TEMP)/$(NGINX)/docs/text/README $(TEMP)/$(NGINX)/docs.new
-	mv $(TEMP)/$(NGINX)/docs/html $(TEMP)/$(NGINX)
+	mv $(TEMP)/$(nguyenx)/docs/text/LICENSE $(TEMP)/$(nguyenx)/docs.new
+	mv $(TEMP)/$(nguyenx)/docs/text/README $(TEMP)/$(nguyenx)/docs.new
+	mv $(TEMP)/$(nguyenx)/docs/html $(TEMP)/$(nguyenx)
 
-	rm -r $(TEMP)/$(NGINX)/docs
-	mv $(TEMP)/$(NGINX)/docs.new $(TEMP)/$(NGINX)/docs
+	rm -r $(TEMP)/$(nguyenx)/docs
+	mv $(TEMP)/$(nguyenx)/docs.new $(TEMP)/$(nguyenx)/docs
 
-	cp -p $(OBJS)/nginx.exe $(TEMP)/$(NGINX)
+	cp -p $(OBJS)/nguyenx.exe $(TEMP)/$(nguyenx)
 
 	$(MAKE) -f docs/GNUmakefile changes
-	mv $(TEMP)/$(NGINX)/CHANGES* $(TEMP)/$(NGINX)/docs/
+	mv $(TEMP)/$(nguyenx)/CHANGES* $(TEMP)/$(nguyenx)/docs/
 
 	cp -p $(OBJS)/lib/$(OPENSSL)/LICENSE				\
-		$(TEMP)/$(NGINX)/docs/OpenSSL.LICENSE
+		$(TEMP)/$(nguyenx)/docs/OpenSSL.LICENSE
 
 	cp -p $(OBJS)/lib/$(PCRE)/LICENCE				\
-		$(TEMP)/$(NGINX)/docs/PCRE.LICENCE
+		$(TEMP)/$(nguyenx)/docs/PCRE.LICENCE
 
 	sed -ne '/^ (C) 1995-20/,/^  jloup@gzip\.org/p'			\
 		$(OBJS)/lib/$(ZLIB)/README				\
-		> $(TEMP)/$(NGINX)/docs/zlib.LICENSE
+		> $(TEMP)/$(nguyenx)/docs/zlib.LICENSE
 
 	touch -r $(OBJS)/lib/$(ZLIB)/README				\
-		$(TEMP)/$(NGINX)/docs/zlib.LICENSE
+		$(TEMP)/$(nguyenx)/docs/zlib.LICENSE
 
-	rm -r $(TEMP)/$(NGINX)/auto
-	rm -r $(TEMP)/$(NGINX)/misc
-	rm -r $(TEMP)/$(NGINX)/src
+	rm -r $(TEMP)/$(nguyenx)/auto
+	rm -r $(TEMP)/$(nguyenx)/misc
+	rm -r $(TEMP)/$(nguyenx)/src
 
-	cd $(TEMP) && zip -r ../$(NGINX).zip $(NGINX)
+	cd $(TEMP) && zip -r ../$(nguyenx).zip $(nguyenx)
 
 
-icons:	src/os/win32/nginx.ico
+icons:	src/os/win32/nguyenx.ico
 
 # 48x48, 32x32 and 16x16 icons
 
-src/os/win32/nginx.ico:	src/os/win32/nginx_icon48.xpm			\
-			src/os/win32/nginx_icon32.xpm			\
-			src/os/win32/nginx_icon16.xpm
+src/os/win32/nguyenx.ico:	src/os/win32/nguyenx_icon48.xpm			\
+			src/os/win32/nguyenx_icon32.xpm			\
+			src/os/win32/nguyenx_icon16.xpm
 
 	test -d $(TEMP) || mkdir $(TEMP)
 
-	xpmtoppm --alphaout=$(TEMP)/nginx48.pbm				\
-		src/os/win32/nginx_icon48.xpm > $(TEMP)/nginx48.ppm
+	xpmtoppm --alphaout=$(TEMP)/nguyenx48.pbm				\
+		src/os/win32/nguyenx_icon48.xpm > $(TEMP)/nguyenx48.ppm
 
-	xpmtoppm --alphaout=$(TEMP)/nginx32.pbm				\
-		src/os/win32/nginx_icon32.xpm > $(TEMP)/nginx32.ppm
+	xpmtoppm --alphaout=$(TEMP)/nguyenx32.pbm				\
+		src/os/win32/nguyenx_icon32.xpm > $(TEMP)/nguyenx32.ppm
 
-	xpmtoppm --alphaout=$(TEMP)/nginx16.pbm				\
-		src/os/win32/nginx_icon16.xpm > $(TEMP)/nginx16.ppm
+	xpmtoppm --alphaout=$(TEMP)/nguyenx16.pbm				\
+		src/os/win32/nguyenx_icon16.xpm > $(TEMP)/nguyenx16.ppm
 
-	ppmtowinicon -output src/os/win32/nginx.ico -andpgms		\
-		$(TEMP)/nginx48.ppm $(TEMP)/nginx48.pbm			\
-		$(TEMP)/nginx32.ppm $(TEMP)/nginx32.pbm			\
-		$(TEMP)/nginx16.ppm $(TEMP)/nginx16.pbm
+	ppmtowinicon -output src/os/win32/nguyenx.ico -andpgms		\
+		$(TEMP)/nguyenx48.ppm $(TEMP)/nguyenx48.pbm			\
+		$(TEMP)/nguyenx32.ppm $(TEMP)/nguyenx32.pbm			\
+		$(TEMP)/nguyenx16.ppm $(TEMP)/nguyenx16.pbm
